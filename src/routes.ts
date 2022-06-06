@@ -3,4 +3,6 @@ import { SubmitFeedbackController } from './controllers/submit-feedback-controll
 
 export const routes = express.Router()
 
-routes.post('/feedbacks', SubmitFeedbackController.handle)
+const submitFeedbackController = new SubmitFeedbackController()
+
+routes.post('/feedbacks', submitFeedbackController.handle)

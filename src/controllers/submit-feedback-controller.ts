@@ -4,7 +4,7 @@ import { PrismaFeedbackRepository } from "../repositories/prisma/prisma-feedback
 import { SubmitFeedbackUsecase } from "../use-cases/submit-feedback-use-case"
 
 export class SubmitFeedbackController{
-    static async handle(request: Request, response: Response){
+    async handle(request: Request, response: Response){
         const { type, comment, screenshot} = request.body
         const nodemailerMailAdapter = new NodemailerMailAdapter()
 
