@@ -7,7 +7,7 @@ interface SubmitFeedbackCase{
     screenshot?: string
 }
 
-export class SubmitFeedbackUsecase{
+class SubmitFeedbackUsecase{
 
     constructor(
         private feedbacksRepository: FeedbacksRepository,
@@ -36,3 +36,5 @@ export class SubmitFeedbackUsecase{
         })
     }
 }
+
+export  { SubmitFeedbackUsecase }
